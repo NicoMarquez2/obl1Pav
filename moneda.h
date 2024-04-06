@@ -1,0 +1,1 @@
+enum Moneda {us, usd}
