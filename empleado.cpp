@@ -22,9 +22,9 @@ string Empleado::getCI(){
 int Empleado::getEdad(){
     return this->edad;
 }
-Paga Empleado::getValorHora(){
+/*Paga Empleado::getValorHora(){
     return this->valor_hora;
-}
+}*/
 
 void Empleado::setNombre(string nom){
     this->nombre = nom;
@@ -35,6 +35,6 @@ void Empleado::setCI(string ci){
 void Empleado::setEdad(int edad){
     this->edad = edad;
 }
-void Empleado::setValorHora(Paga vh){
+/*void Empleado::setValorHora(Paga vh){
     this->valor_hora = vh;
-}
+}*/

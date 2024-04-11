@@ -8,10 +8,10 @@ private:
     string nombre;
     string ci;
     int edad;
-    Paga valor_hora;
+    //Paga valor_hora;
     //Empresa* empresa;
 public:
-    Empleado(string nom, string ci, int edad/*Empresa* e*/);
+    Empleado(string nom, string ci, int edad/*, Empresa* e*/);
     Empleado();
     string getNombre();
     string getCI();
@@ -23,7 +23,7 @@ public:
     void setEdad(int edad);
     void setValorHora(Paga valorHora);
 
-    virtual float getSueldoPeso();
-    virtual float getSueldoDolar();
+    virtual float getSueldoPeso() = 0;
+    virtual float getSueldoDolar() = 0;
     ~Empleado();
 };
