@@ -1,12 +1,10 @@
-#include <string>
-#include "empleado.h"
-#define MAX_EMPLEADO = 100
+#include <string.h>
+#define MAX_EMPLEADO = 50
+using namespace std;
 
 class Empresa{
-    private:
+    private:       
         string nombre;
         string nombre_legal;
         int rut;
-        
-    public:
-}
+};

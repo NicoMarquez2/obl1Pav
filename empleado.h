@@ -9,9 +9,10 @@ private:
     string ci;
     int edad;
     Paga valor_hora;
-    Empresa* empresa;
+    //Empresa* empresa;
 public:
-    empleado(string nom, string ci, int e, Empresa* e);
+    Empleado(string nom, string ci, int edad/*Empresa* e*/);
+    Empleado();
     string getNombre();
     string getCI();
     int getEdad();
@@ -21,13 +22,8 @@ public:
     void setCI(string ci);
     void setEdad(int edad);
     void setValorHora(Paga valorHora);
-    ~empleado();
+
+    virtual float getSueldoPeso();
+    virtual float getSueldoDolar();
+    ~Empleado();
 };
-
-empleado::empleado(/* args */)
-{
-}
-
-empleado::~empleado()
-{
-}

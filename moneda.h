@@ -1,1 +1,1 @@
-enum Moneda {us, usd}
+enum Moneda {us, usd};

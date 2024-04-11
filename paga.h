@@ -4,18 +4,12 @@
 class Paga
 {
 private:
-    /* data */
     float monto;
     Moneda moneda;
 public:
-    paga(/* args */);
-    ~paga();
+    Paga();
+    Paga(float monto, Moneda moneda);
+    float getMonto();
+    Moneda getMoneda();
+    ~Paga();
 };
-
-paga::paga(/* args */)
-{
-}
-
-paga::~paga()
-{
-}
