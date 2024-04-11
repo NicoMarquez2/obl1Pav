@@ -9,6 +9,8 @@ private:
 public:
     Paga();
     Paga(float monto, Moneda moneda);
+    Paga a_dolar();
+    Paga a_peso();
     float getMonto();
     Moneda getMoneda();
     ~Paga();
