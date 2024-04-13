@@ -13,5 +13,5 @@ public:
     Paga a_peso();
     float getMonto();
     Moneda getMoneda();
-    ~Paga();
+    //~Paga();
 };
