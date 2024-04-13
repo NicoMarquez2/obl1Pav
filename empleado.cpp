@@ -1,5 +1,6 @@
 #include "empleado.h"
 #include "string.h"
+#include "paga.cpp"
 
 Empleado::Empleado(string nombre, string ci, int edad, Paga vh){
     nombre = nombre;

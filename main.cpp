@@ -1,7 +1,7 @@
 #include <string.h>
 #include <iostream>
 #include <stdio.h>
-//#include "empleado.cpp"
+#include "empleado.cpp"
 
 using namespace std;
 

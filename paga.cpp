@@ -22,15 +22,11 @@ Moneda Paga::getMoneda(){
 }
 
 Paga Paga::a_dolar(){
-    if (this->moneda == Moneda{usd})
-        return;
-    else
-        return Paga::Paga(Cambio::a_dolar(this->monto), Moneda{us});
+    if (this->moneda != Moneda{usd})
+        Paga(Cambio::a_dolar(this->monto), Moneda{us});
 }
 
 Paga Paga::a_peso(){
-    if (this->moneda == Moneda{us})
-        return;
-    else
-        return Paga::Paga(Cambio::a_peso(this->monto), Moneda{usd});
+    if (this->moneda != Moneda{us})
+        return Paga(Cambio::a_peso(this->monto), Moneda{usd});
 }

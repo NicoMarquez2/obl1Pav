@@ -1,5 +1,5 @@
 #include <string.h>
-#include "paga.h"
+#include "paga.cpp"
 #include "empresa.h"
 
 class Empleado
