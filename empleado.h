@@ -8,10 +8,10 @@ private:
     string nombre;
     string ci;
     int edad;
-    //Paga valor_hora;
+    Paga valor_hora;
     //Empresa* empresa;
 public:
-    Empleado(string nom, string ci, int edad/*, Empresa* e*/);
+    Empleado(string nom, string ci, int edad, Paga vh/*, Empresa* e*/);
     Empleado();
     string getNombre();
     string getCI();

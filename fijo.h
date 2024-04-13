@@ -4,9 +4,11 @@
 
 using namespace std;
 
-class fijo : public Empleado
+class Fijo : public Empleado
 {
 public:
-    fijo();
-    ~fijo();
+    Fijo();
+    float getSueldoPeso();
+    float getSueldoDolar();
+    ~Fijo();
 };
