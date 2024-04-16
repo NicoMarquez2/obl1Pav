@@ -1,4 +1,4 @@
-#include <string.h>
+#include <string>
 #define MAX_EMPLEADO 50
 using namespace std;
 

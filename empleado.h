@@ -25,5 +25,5 @@ public:
 
     virtual float getSueldoPeso() = 0;
     virtual float getSueldoDolar() = 0;
-    ~Empleado();
+    //~Empleado();
 };

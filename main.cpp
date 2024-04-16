@@ -1,13 +1,16 @@
 #include <string.h>
 #include <iostream>
 #include <stdio.h>
-#include "empleado.cpp"
+#include "fijo.cpp"
 
 using namespace std;
 
 int main(){
     bool salir = false;
     int option = 0;
+    Paga pagaEmp;
+    Fijo empFijo("juan", "1334567", 43, pagaEmp);
+    cout << "nombre:" << empFijo.getNombre() << endl;
 
     while(!salir){
         cout << "Ingrese la opción que desee:" <<endl;

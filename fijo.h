@@ -6,8 +6,8 @@ using namespace std;
 class Fijo : public Empleado
 {
 public:
-    Fijo();
+    Fijo(string nombre, string ci, int edad, Paga vh);
     float getSueldoPeso();
     float getSueldoDolar();
-    ~Fijo();
+    //~Fijo();
 };

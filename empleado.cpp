@@ -1,18 +1,18 @@
 #include "empleado.h"
 #include "string.h"
 
-Empleado::Empleado(string nombre, string ci, int edad, Paga vh){
-    nombre = nombre;
-    ci = ci;
-    edad = edad;
-    valor_hora = vh;
+Empleado::Empleado(string nom, string ci, int edad, Paga vh){
+    this->nombre = nom;
+    this->ci = ci;
+    this->edad = edad;
+    this->valor_hora = vh;
 }
 
 Empleado::Empleado(){
-    nombre = "juan";
-    ci = "1234567";
-    edad = 32;
-    valor_hora = Paga();
+    this->nombre = "juan";
+    this->ci = "1234567";
+    this->edad = 32;
+    this->valor_hora = Paga();
 }
 
 string Empleado::getNombre(){
