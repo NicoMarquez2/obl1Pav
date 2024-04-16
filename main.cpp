@@ -10,8 +10,10 @@ int main(){
     int option = 0;
     Paga pagaEmp;
     Fijo empFijo("juan", "1334567", 43, pagaEmp);
-    cout << "nombre:" << empFijo.getNombre() << endl;
-    cout << "paga:" << empFijo.getSueldoPeso() << endl;
+    cout << "nombre: " << empFijo.getNombre() << endl;
+    cout << "paga: " << empFijo.getSueldoPeso() << endl;
+    cout << "edad: " << empFijo.getEdad() << endl;
+    cout << "ci: " << empFijo.getCI() << endl;
 
     while(!salir){
         cout << "Ingrese la opción que desee:" <<endl;
