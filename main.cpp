@@ -11,6 +11,7 @@ int main(){
     Paga pagaEmp;
     Fijo empFijo("juan", "1334567", 43, pagaEmp);
     cout << "nombre:" << empFijo.getNombre() << endl;
+    cout << "paga:" << empFijo.getSueldoPeso() << endl;
 
     while(!salir){
         cout << "Ingrese la opción que desee:" <<endl;
