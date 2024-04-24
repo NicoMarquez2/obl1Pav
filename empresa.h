@@ -15,8 +15,8 @@ class Empresa{
         string getNombreLegal();
         int getRut();
 
-        void setNombre();
-        void setNombreLegal();
-        void setRut();
+        void setNombre(string nom);
+        void setNombreLegal(string nom_legal);
+        void setRut(int r);
         ~Empresa();
 };

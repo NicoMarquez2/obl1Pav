@@ -16,7 +16,7 @@ int main(){
     cout << "ci: " << empFijo.getCI() << endl;
 
     while(!salir){
-        cout << "Ingrese la opción que desee:" <<endl;
+        cout << "\nIngrese la opcion que desee:" <<endl;
         cout << "1: Dar alta empresa" <<endl;
         cout << "2: Dar alta empleado" <<endl;
         cout << "3: Obtener total sueldo en dólares" <<endl;
