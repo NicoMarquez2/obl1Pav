@@ -9,8 +9,8 @@ Paga::Paga(){
 }
 
 Paga::Paga(float monto, Moneda moneda){
-    monto = monto;
-    moneda = moneda;
+    this->monto = monto;
+    this->moneda = moneda;
 }
 
 float Paga::getMonto(){

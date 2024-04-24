@@ -8,12 +8,17 @@ using namespace std;
 int main(){
     bool salir = false;
     int option = 0;
+    Empresa* emp = new Empresa("empresa", "legal", 123456789);
+    cout << "nombreE: " << emp->getNombre() << endl;
+    cout << "legal: " << emp->getNombreLegal() << endl;
+    cout << "rut: " << emp->getRut() << endl;
     Paga pagaEmp;
-    Fijo empFijo("juan", "1334567", 43, pagaEmp);
-    cout << "nombre: " << empFijo.getNombre() << endl;
-    cout << "paga: " << empFijo.getSueldoPeso() << endl;
-    cout << "edad: " << empFijo.getEdad() << endl;
-    cout << "ci: " << empFijo.getCI() << endl;
+    Fijo* empFijo = new Fijo("juan", "1334567", 43, pagaEmp, emp);
+    cout << "nombre: " << empFijo->getNombre() << endl;
+    cout << "paga: " << empFijo->getSueldoPeso() << endl;
+    cout << "edad: " << empFijo->getEdad() << endl;
+    cout << "ci: " << empFijo->getCI() << endl;
+    cout << "JNDJKASDN: " << empFijo->getEmpresa()->getNombre() << endl;
 
     while(!salir){
         cout << "\nIngrese la opcion que desee:" <<endl;

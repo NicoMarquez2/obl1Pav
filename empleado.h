@@ -1,6 +1,6 @@
 #include <string.h>
 #include "paga.cpp"
-#include "empresa.h"
+#include "empresa.cpp"
 
 class Empleado
 {
@@ -9,14 +9,15 @@ private:
     string ci;
     int edad;
     Paga valor_hora;
-    //Empresa* empresa;
+    Empresa* empresa;
 public:
-    Empleado(string nom, string ci, int edad, Paga vh/*, Empresa* e*/);
+    Empleado(string nom, string ci, int edad, Paga vh, Empresa* e);
     Empleado();
     string getNombre();
     string getCI();
     int getEdad();
     Paga getValorHora();
+    Empresa* getEmpresa();
 
     void setNombre(string nom);
     void setCI(string ci);

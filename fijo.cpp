@@ -1,7 +1,7 @@
 #include "fijo.h"
 #include "string.h"
 
-Fijo::Fijo(string nombre, string ci, int edad, Paga vh) : Empleado(nombre, ci, edad, vh) {}
+Fijo::Fijo(string nombre, string ci, int edad, Paga vh, Empresa* e) : Empleado(nombre, ci, edad, vh, e) {}
 
 float Fijo::getSueldoPeso(){
     Paga paga = getValorHora();
