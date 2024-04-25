@@ -1,5 +1,4 @@
 #include "paga.h"
-#include "cambio.cpp"
 
 using namespace std;
 

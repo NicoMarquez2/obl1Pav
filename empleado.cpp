@@ -45,3 +45,7 @@ void Empleado::setEdad(int edad){
 void Empleado::setValorHora(Paga vh){
     this->valor_hora = vh;
 }
+
+void Empleado::setEmpresa(Empresa* e){
+    this->empresa = e;
+};

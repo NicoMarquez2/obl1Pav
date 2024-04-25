@@ -1,4 +1,4 @@
-#include "empleado.cpp"
+#include "empleado.h"
 #include "string.h"
 
 using namespace std;

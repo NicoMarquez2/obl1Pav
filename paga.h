@@ -1,5 +1,6 @@
 #include <string>
 #include "moneda.h"
+#include "cambio.h"
 
 class Paga
 {

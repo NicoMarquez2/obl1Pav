@@ -1,6 +1,6 @@
 #include <string.h>
-#include "paga.cpp"
-#include "empresa.cpp"
+#include "paga.h"
+#include "empresa.h"
 
 class Empleado
 {
@@ -23,6 +23,7 @@ public:
     void setCI(string ci);
     void setEdad(int edad);
     void setValorHora(Paga valorHora);
+    void setEmpresa(Empresa* e);
 
     virtual float getSueldoPeso() = 0;
     virtual float getSueldoDolar() = 0;

@@ -30,3 +30,7 @@ void Empresa::setNombreLegal(string nom_legal){
 void Empresa::setRut(int r){
     this->rut = r;
 };
+
+/*void Empresa::addEmpleado(Empleado emp){
+    this->emp[0] = emp;
+};*/
