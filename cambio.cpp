@@ -4,9 +4,9 @@
 using namespace std;
 
 float Cambio::a_peso(float cant){
-    return cant / COTIZACION;
+    return cant * COTIZACION;
 }
 
 float Cambio::a_dolar(float cant){
-    return cant * COTIZACION;
+    return cant / COTIZACION;
 }

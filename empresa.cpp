@@ -1,3 +1,4 @@
+#pragma once
 #include "empresa.h"
 #include "string.h"
 

@@ -8,6 +8,7 @@ class Jornalero : public Empleado{
         int horas;
     public:
         Jornalero(string nombre, string cedula, int edad, int horas, Paga vh, Empresa* e);
+        int getHoras();
         float getSueldoPeso();
         float getSueldoDolar();
         //~Jornalero();
