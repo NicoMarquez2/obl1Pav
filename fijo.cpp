@@ -3,6 +3,8 @@
 
 Fijo::Fijo(string nombre, string ci, int edad, Paga vh, Empresa* e) : Empleado(nombre, ci, edad, vh, e) {}
 
+Fijo::Fijo() : Empleado() {};
+
 float Fijo::getSueldoPeso(){
     Paga paga = getValorHora();
     if (paga.getMoneda() == Moneda::us){

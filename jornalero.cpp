@@ -5,8 +5,14 @@ Jornalero::Jornalero(string nombre, string cedula, int edad, int horas, Paga vh,
                     : 
                     Empleado(nombre, cedula, edad, vh, e), horas(horas) {};
 
+Jornalero::Jornalero() : Empleado(), horas(0){}
+
 int Jornalero::getHoras(){
     return this->horas;
+}
+
+int Jornalero::setHoras(int h){
+    this->horas = h;
 }
 
 float Jornalero::getSueldoPeso(){

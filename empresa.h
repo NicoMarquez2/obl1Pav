@@ -18,6 +18,8 @@ class Empresa{
         string getNombreLegal();
         int getRut();
         Empleado** getEmpleados();
+        float total_sueldo_peso();
+        float total_sueldo_dolar();
 
         void setNombre(string nom);
         void setNombreLegal(string nom_legal);

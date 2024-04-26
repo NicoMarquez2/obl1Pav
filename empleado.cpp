@@ -11,8 +11,8 @@ Empleado::Empleado(string nom, string ci, int edad, Paga vh, Empresa* e){
 
 Empleado::Empleado(){
     this->nombre = "juan";
-    this->ci = "1234567";
-    this->edad = 32;
+    this->ci = "9999999";
+    this->edad = 100;
     this->valor_hora = Paga();
 }
 
