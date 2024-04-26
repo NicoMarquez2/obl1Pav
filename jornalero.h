@@ -11,7 +11,7 @@ class Jornalero : public Empleado{
         Jornalero();
         int getHoras();
 
-        int setHoras(int h);
+        void setHoras(int h);
         float getSueldoPeso();
         float getSueldoDolar();
         //~Jornalero();

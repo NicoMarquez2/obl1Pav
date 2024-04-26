@@ -11,7 +11,7 @@ int Jornalero::getHoras(){
     return this->horas;
 }
 
-int Jornalero::setHoras(int h){
+void Jornalero::setHoras(int h){
     this->horas = h;
 }
 
