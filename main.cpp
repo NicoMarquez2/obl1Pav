@@ -56,7 +56,7 @@ int main(){
         cout << "\nIngrese la opcion que desee:" <<endl;
         cout << "1: Dar alta empresa" <<endl;
         cout << "2: Dar alta empleado" <<endl;
-        cout << "3: Obtener total sueldo en dólares" <<endl;
+        cout << "3: Obtener total sueldo en dolares" <<endl;
         cout << "4: Obtener total sueldo en pesos" <<endl;
         cout << "5: Salir" <<endl;
         cin >> option;
