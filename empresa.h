@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #define MAX_EMPLEADO 50
 using namespace std;
@@ -16,10 +17,11 @@ class Empresa{
         string getNombre();
         string getNombreLegal();
         int getRut();
+        Empleado** getEmpleados();
 
         void setNombre(string nom);
         void setNombreLegal(string nom_legal);
         void setRut(int r);
-        //void addEmpleado(Empleado emp);
+        void addEmpleado(Empleado* emp);
         //~Empresa();
 };

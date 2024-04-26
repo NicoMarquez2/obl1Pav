@@ -39,6 +39,11 @@ int main(){
     cout << "ci: " << empFijo->getCI() << endl;
     cout << "JNDJKASDN: " << empFijo->getEmpresa()->getNombre() << endl;
 
+    emp->addEmpleado(empFijo);
+    emp->addEmpleado(empJor);
+    cout << "\nempleados: " << emp->getEmpleados()[0]->getNombre() << endl;
+    cout << "\nempleados: " << emp->getEmpleados()[1]->getNombre() << endl;
+
     while(!salir){
         cout << "\nIngrese la opcion que desee:" <<endl;
         cout << "1: Dar alta empresa" <<endl;
