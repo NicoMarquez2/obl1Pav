@@ -47,7 +47,9 @@ int main(){
     int edadEmpleado;
     int horas;
     float monto;
-    Moneda moneda;
+    int monedaIngresada;
+    Moneda monedaUs = us;
+    Moneda monedaUsd = usd;
     Paga paga;
 
     while(!salir){
@@ -85,13 +87,21 @@ int main(){
                     cin >> ciEmpleado;
                     cout << "Ingrese la edad del empleado: " << endl;
                     cin >> edadEmpleado;
-                    /*cout << "ingrese el monto del valor hora del empeleado: " << endl;
+                    cout << "ingrese el monto del valor hora del empeleado: " << endl;
                     cin >> monto;
                     cout << "Ingrese la moneda de la paga (0 = us, 1 = usd): " << endl;
-                    cin >> moneda;
+                    cin >> monedaIngresada;
                     
-                    Paga p(monto, moneda);*/
-                    setearEmpleadoFijo(nombreEmpleado, ciEmpleado, edadEmpleado, paga, empFijo, empresa);
+                    if(monedaIngresada == 0){
+                        Paga p(monto, monedaUs);
+                        setearEmpleadoFijo(nombreEmpleado, ciEmpleado, edadEmpleado, p, empFijo, empresa);
+                    } else if (monedaIngresada == 1){
+                        Paga p(monto, monedaUsd);
+                        setearEmpleadoFijo(nombreEmpleado, ciEmpleado, edadEmpleado, p, empFijo, empresa);
+                    } else {
+                        cout << "\n Moneda incorrecta";
+                        break;
+                    }
                     empresa->addEmpleado(empFijo);
 
                 } else if (opcionEmpleado == 2){
@@ -101,15 +111,23 @@ int main(){
                     cin >> ciEmpleado;
                     cout << "Ingrese la edad del empleado: " << endl;
                     cin >> edadEmpleado;
-                    /*cout << "ingrese el monto del valor hora del empeleado: " << endl;
+                    cout << "ingrese el monto del valor hora del empeleado: " << endl;
                     cin >> monto;
-                    cout << "Ingrese la moneda de la paga: " << endl;
-                    cin >> moneda;*/
+                    cout << "Ingrese la moneda de la paga (0: us, 1: usd): " << endl;
+                    cin >> monedaIngresada;
                     cout << "ingrese la cantidad de horas que trabaja el empleado: " << endl;
                     cin >> horas;
 
-                    //Paga p(monto, moneda);
-                    setearEmpleadoJornalero(nombreEmpleado, ciEmpleado, edadEmpleado, paga, horas, empJor, empresa);
+                    if(monedaIngresada == 0){
+                        Paga p(monto, monedaUs);
+                        setearEmpleadoJornalero(nombreEmpleado, ciEmpleado, edadEmpleado, p, horas, empJor, empresa);
+                    } else if (monedaIngresada == 1){
+                        Paga p(monto, monedaUsd);
+                        setearEmpleadoJornalero(nombreEmpleado, ciEmpleado, edadEmpleado, p, horas, empJor, empresa);
+                    } else {
+                        cout << "\n Moneda incorrecta";
+                        break;
+                    }
                     empresa->addEmpleado(empJor);
                 } else {
                     cout << "\nerror";
@@ -117,10 +135,18 @@ int main(){
             }
             break;
         case 3:
-            cout << "3";
+            if (empresa->getRut() == 0){
+                cout << "\nIngrese primero una empresa";
+            } else {
+                cout << "El total de sueldo en dolares es: " << empresa->total_sueldo_dolar() << endl;
+            }
             break;
         case 4:
-            cout << "4";
+            if (empresa->getRut() == 0){
+                cout << "\nIngrese primero una empresa";
+            } else {
+                cout << "El total de sueldo en pesos es: " << empresa->total_sueldo_peso() << endl;
+            }
             break;
         case 5:
             salir = true;
@@ -130,44 +156,5 @@ int main(){
             break;
         }
     }
-    cout << "chau";
     return 0;
 }
-
- /*Empresa* emp = new Empresa("empresa", "legal", 123456789);
-    cout << "nombreE: " << emp->getNombre() << endl;
-    cout << "legal: " << emp->getNombreLegal() << endl;
-    cout << "rut: " << emp->getRut() << endl;
-    Moneda monedaUs = us;
-    Moneda monedaUsd = usd;
-    Paga pagaEmp(13.78, monedaUs);
-    cout << "\nmoneda: " << pagaEmp.getMoneda() << endl;
-    cout << "monto: " << pagaEmp.getMonto() << endl;
-    Jornalero* empJor = new Jornalero("pepe", "7654321", 25, 10, pagaEmp, emp);
-    cout << "\nnombre: " << empJor->getNombre() << endl;
-    cout << "paga: " << empJor->getValorHora().getMonto() << endl;
-    cout << "moneda : " << empJor->getValorHora().getMoneda() << endl;
-    cout << "horas: " << empJor->getHoras() << endl;
-    cout << "paga total us: " << empJor->getSueldoPeso() << endl;
-    cout << "paga total usd: " << empJor->getSueldoDolar() << endl;
-    cout << "edad: " << empJor->getEdad() << endl;
-    cout << "ci: " << empJor->getCI() << endl;
-    cout << "JNDJKASDN: " << empJor->getEmpresa()->getNombre() << endl;
-
-    Fijo* empFijo = new Fijo("juan", "1334567", 43, pagaEmp, emp);
-    cout << "\nnombre: " << empFijo->getNombre() << endl;
-    cout << "paga: " << empJor->getValorHora().getMonto() << endl;
-    cout << "moneda : " << empJor->getValorHora().getMoneda() << endl;
-    cout << "paga total us: " << empFijo->getSueldoPeso() << endl;
-    cout << "paga total usd: " << empFijo->getSueldoDolar() << endl;
-    cout << "edad: " << empFijo->getEdad() << endl;
-    cout << "ci: " << empFijo->getCI() << endl;
-    cout << "JNDJKASDN: " << empFijo->getEmpresa()->getNombre() << endl;
-
-    emp->addEmpleado(empFijo);
-    emp->addEmpleado(empJor);
-    cout << "\nempleados: " << emp->getEmpleados()[0]->getNombre() << endl;
-    cout << "empleados: " << emp->getEmpleados()[1]->getNombre() << endl;
-
-    cout << "sueldo total peso: " << emp->total_sueldo_peso() << endl;
-    cout << "\nsueldo total dolar: " << emp->total_sueldo_dolar() << endl;*/
